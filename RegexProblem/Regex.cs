@@ -66,5 +66,17 @@ namespace RegexProblem
                 Console.WriteLine("Pattern is Not Mathing");
             }
         }
+        public void ValidatePassword2(string password)
+        {
+            string passwordPatten = "(?=.*[A-Z])[A-Za-z0-9]{8,}";
+            if (Regex.IsMatch(password, passwordPatten))
+            {
+                Console.WriteLine("Password is Valid");
+            }
+            else
+            {
+                Console.WriteLine("Password not Valid ");
+            }
+        }
     }
 }
