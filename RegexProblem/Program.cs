@@ -11,7 +11,7 @@ namespace RegexProblem
         static void Main(string[] args)
         {
             Regexproblem regexproblem = new Regexproblem();
-            regexproblem.Validatefirstname("Aft");
+            regexproblem.Validatefirstname("Aftab");
             Console.ReadLine();
         }
     }
