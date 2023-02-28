@@ -44,5 +44,15 @@ namespace RegexProblem
             else
                 Console.WriteLine("Not Matching With Pattern");
         }
+        public void ValidateNumber(string number)
+        {
+            string phoneNumber = "@\"[0-9]{1,2}\\s[0-9]{10}\"\r\n";
+            if(Regex.IsMatch(number, phoneNumber))
+            {
+                Console.WriteLine("The Regex Pattern For Phone Number IS Mactching");
+            }
+            else
+                Console.WriteLine("Pattern is Not MAtching");
+        }
     }
 }

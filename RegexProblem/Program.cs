@@ -14,6 +14,7 @@ namespace RegexProblem
             regexproblem.Validatefirstname("Aftab");
             regexproblem.Validatelastname("Patel");
             regexproblem.ValidateEmail("abc.xyz@bridgelabz.co.in\r\n");
+            regexproblem.ValidateNumber("91 9876987654");
             Console.ReadLine();
         }
     }
