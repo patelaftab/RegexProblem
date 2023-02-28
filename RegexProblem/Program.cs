@@ -18,6 +18,7 @@ namespace RegexProblem
             regexproblem.ValidatePassword("aftabkas");
             regexproblem.ValidatePassword2("Aftabpat");
             regexproblem.ValidatePassword3("Aftabpat3");
+            regexproblem.ValidatePassword4("Aftabpat@3");
             Console.ReadLine();
         }
     }
