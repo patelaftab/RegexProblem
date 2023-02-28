@@ -21,6 +21,18 @@ namespace RegexProblem
                 Console.WriteLine("The Regex Pattern is not WOrking");
             }  
         }
-       
+        public void Validatelastname(string name)
+        {
+            string lastName = "^[A-Z][a-z]{3,}?";
+            if (Regex.IsMatch(name, lastName))
+            {
+                Console.WriteLine("The Name is MAtching");
+            }
+            else
+            {
+                Console.WriteLine("The PAttern is Not MAtching");
+            }
+
+        }
     }
 }
