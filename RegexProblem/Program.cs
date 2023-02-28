@@ -17,6 +17,7 @@ namespace RegexProblem
             regexproblem.ValidateNumber("91 9876987654");
             regexproblem.ValidatePassword("aftabkas");
             regexproblem.ValidatePassword2("Aftabpat");
+            regexproblem.ValidatePassword3("Aftabpat3");
             Console.ReadLine();
         }
     }
