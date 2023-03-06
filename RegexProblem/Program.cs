@@ -10,15 +10,15 @@ namespace RegexProblem
     {
         static void Main(string[] args)
         {
-            Regexproblem regexproblem = new Regexproblem();
+            Regexproblems regexproblem = new Regexproblems(null);
             regexproblem.Validatefirstname("Aftab");
             regexproblem.Validatelastname("Patel");
-            regexproblem.ValidateEmail("abc.xyz@bridgelabz.co.in\r\n");
+            regexproblem.ValidateEmail("abc.xyz@bridgelabz.co.in");
             regexproblem.ValidateNumber("91 9876987654");
             regexproblem.ValidatePassword("aftabkas");
             regexproblem.ValidatePassword2("Aftabpat");
             regexproblem.ValidatePassword3("Aftabpat3");
-            regexproblem.ValidatePassword4("Aftabpat@3");
+            regexproblem.ValidatePassword4("Aftabpat@3");   
             Console.ReadLine();
         }
     }

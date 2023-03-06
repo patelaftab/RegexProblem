@@ -4,24 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using static RegexProblem.CustomeException;
 
 namespace RegexProblem
 {
-    public class Regexproblem
+    public class Regexproblems
     {
-        public void Validatefirstname(string name)
+        string message;
+        public Regexproblems(string message)
+        {
+            this.message = message;
+        }
+        public string Validatefirstname(string message)
         {
             string firstName = "^[A-Z][a-z]{3,}?";
-            if (Regex.IsMatch(name, firstName)) 
+            if (Regex.IsMatch(message, firstName))
             {
                 Console.WriteLine("The First Name is MAtching");
             }
             else
             {
-                Console.WriteLine("The Regex Pattern is not WOrking");
-            }  
+                Console.WriteLine("The Regex Pattern is not Working");
+            }
+            return "Aftab";
         }
-        public void Validatelastname(string name)
+        public string Validatelastname(string name)
         {
             string lastName = "^[A-Z][a-z]{3,}?";
             if (Regex.IsMatch(name, lastName))
@@ -30,11 +37,11 @@ namespace RegexProblem
             }
             else
             {
-                Console.WriteLine("The PAttern is Not MAtching");
+                Console.WriteLine("The Pattern is Not MAtching");
             }
-
+            return "Patel";
         }
-        public void ValidateEmail(string email)
+        public string ValidateEmail(string email)
         {
             string emailadd = "^[a-zA-Z]+[.+_-]{0,1}[a-z]+[@][a-zA-Z]+[.][a-z]{2,3}([.][a-z]{2}){0,1}?";
             if(Regex.IsMatch(email, emailadd))
@@ -43,8 +50,9 @@ namespace RegexProblem
             }
             else
                 Console.WriteLine("Not Matching With Pattern");
+            return "abc.xyz@bridgelabz.co.in";
         }
-        public void ValidateNumber(string number)
+        public string ValidateNumber(string number)
         {
             string phoneNumber = "^[0-9]{1,2}[ ][0-9]{10}?";
             if(Regex.IsMatch(number, phoneNumber))
@@ -53,8 +61,9 @@ namespace RegexProblem
             }
             else
                 Console.WriteLine("Pattern is Not MAtching");
+            return "91 9876987654";
         }
-        public void ValidatePassword(string password)
+        public string ValidatePassword(string password)
         {
             string passwrd = @"[A-Z a-z 0-9]{8,}";
             if (Regex.IsMatch(password, passwrd))
@@ -65,8 +74,9 @@ namespace RegexProblem
             {
                 Console.WriteLine("Pattern is Not Mathing");
             }
+            return "aftabkas";
         }
-        public void ValidatePassword2(string password)
+        public string ValidatePassword2(string password)
         {
             string passwordPatten = "(?=.*[A-Z])[A-Za-z0-9]{8,}";
             if (Regex.IsMatch(password, passwordPatten))
@@ -77,8 +87,9 @@ namespace RegexProblem
             {
                 Console.WriteLine("Password not Valid ");
             }
+            return "Aftabpat";
         }
-        public void ValidatePassword3(string password)
+        public string ValidatePassword3(string password)
         {
             string passwordPatten = "(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}";
             if (Regex.IsMatch(password, passwordPatten))
@@ -89,8 +100,9 @@ namespace RegexProblem
             {
                 Console.WriteLine("Password not Valid ");
             }
+            return "Aftabpat3";
         }
-        public void ValidatePassword4(string password)
+        public string ValidatePassword4(string password)
         {
             string passwordPatten = "(?=.*[A-Z])(?=.*[0-9])(?=.*[*#@$!^_-])[A-Za-z0-9]{8,}";
             if (Regex.IsMatch(password, passwordPatten))
@@ -101,6 +113,7 @@ namespace RegexProblem
             {
                 Console.WriteLine("Password not Valid ");
             }
+            return "Aftabpat@3";
         }
     }
 }
