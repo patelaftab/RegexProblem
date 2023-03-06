@@ -17,16 +17,23 @@ namespace RegexProblem
         }
         public string Validatefirstname(string message)
         {
-            string firstName = "^[A-Z][a-z]{3,}?";
-            if (Regex.IsMatch(message, firstName))
+            try
             {
-                Console.WriteLine("The First Name is MAtching");
+                string firstName = "^[A-Z][a-z]{3,}?";
+                if (Regex.IsMatch(message, firstName))
+                {
+                    Console.WriteLine("The First Name is MAtching");
+                }
+                else
+                {
+                    Console.WriteLine("The Regex Pattern is not Working");
+                }
+                return "Aftab";
             }
-            else
+            catch(NullReferenceException)
             {
-                Console.WriteLine("The Regex Pattern is not Working");
+                throw new CustomeException(ExceptionType.EMPTY_INPUT, "Please do not Enter the Null Input");
             }
-            return "Aftab";
         }
         public string Validatelastname(string name)
         {

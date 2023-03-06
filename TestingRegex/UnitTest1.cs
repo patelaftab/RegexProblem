@@ -62,5 +62,13 @@ namespace TestingRegex
             string result = regexProblem.ValidatePassword4("Aftabpat@3");
             Assert.AreEqual(result, requiredoutput);
         }
+        [Test] //**
+        public void Given_Empty_FirstName_Should_Throw_UserRegistrationException_Indicating_EmptyInput()
+        {
+            Regexproblems regexproblems = new Regexproblems(null);
+            string result = regexproblems.Validatefirstname(" ");
+            Assert.AreEqual(result, " ");
+        }
+
     }
 }
